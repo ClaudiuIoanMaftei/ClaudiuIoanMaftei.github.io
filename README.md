@@ -1,2 +1,1 @@
-# ClaudiuIoanMaftei.github.io
-portfolio
+claudiuioanmaftei.github.io

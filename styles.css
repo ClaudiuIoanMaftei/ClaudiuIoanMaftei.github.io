@@ -1,0 +1,63 @@
+body {
+	background-color: #f8f8f8;
+	color: $color-text;
+	font-family: monospace;
+	font-size: 18px;
+	margin: 0;
+}
+
+.second_background {
+	background-color: #3c9138;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+
+img {
+	width: auto;
+	height: 100%;
+	max-height: 90vh;
+}
+
+.green {
+	position: absolute;
+	top: -30%;
+	left: 37%;
+}
+.dragon {
+	position: absolute;
+	top: 9%;
+	left: 54%;
+}
+.hill5 {
+	position: absolute;
+	top: 9%;
+	left: 34%;
+}
+.hill4 {
+	position: absolute;
+	top: 57%;
+	left: 72%;
+}
+.hill3 {
+	position: absolute;
+	top: 60%;
+	left: 33%;
+}
+.hill2 {
+	position: absolute;
+	top: 62%;
+	left: 61%;
+}
+.hill1 {
+	position: absolute;
+	top: 69%;
+	left: 29%;
+}
+.person {
+	position: absolute;
+	top: 36%;
+	left: 74%;
+}

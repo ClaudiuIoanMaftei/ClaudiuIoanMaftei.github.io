@@ -95,7 +95,7 @@ body{
 
 .banner .bio {
 	position: relative;
-	background: #252424;
+	background: #252424ab;
 	background-size: cover;
 	height: 25%;
 	z-index: 1;

@@ -100,6 +100,7 @@ body{
 	height: 25%;
 	z-index: 1;
 	left: 64px;
+	width: calc(100% - 64px);
 	bottom: -64px;
 	display: block;
 }
@@ -113,19 +114,53 @@ body{
     font-size: 1.1em;
 }
 
-.listing {
+.scrollable {
     position: relative;
 	background: #fff1dd;
 	background-size: cover;
     width: 55%;
-	height: 100%;
     float: right;
     overflow: visible;
 	z-index: 1;
 }
+.scrollable .listing{
+	position: relative;
+	width: calc(55% - 64px);
+	left: 64px;
+}
+.scrollable .listing h1{
+	color: #252424;
+	font-size: 3em;
+}
+.scrollable .listing .list .list_item{
+	position: relative;
+	width: 180%;
+    height: 320px;
+    margin: 0 5% 5% 0;
+    float: left;
+    overflow: hidden;
+}
+.scrollable .listing .list .list_item .bg{
+	width: 100%;
+	height: 100%;
+}
+.scrollable .listing .list .list_item .fg{
+	position: absolute;
+    left: 4px;
+    top: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background-size: cover;
+    background-position: 50% 50%;
+	transition: transform .8s;
+}
+.scrollable .listing .list .list_item .fg:hover {
+  transform: scale(1.1);
+}
+
 
 @media(max-width: 1000px) {
-    .banner,.listing {
+    .banner,.scrollable {
         position:relative;
         width: 100%
     }
@@ -141,4 +176,5 @@ body{
   --mouseY: 0.5;
   --ticksX: 0;
   --ticksY: 0;
+  --scroll: 0;
 }

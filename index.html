@@ -5,6 +5,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="core.css"/>
 		<!--icon-->
+		<!--preview-->
 	</head>
 	<body>
 		<div class="banner">
@@ -26,19 +27,51 @@
 				<p>Programmer. Indie Developer. Poet. Performance Artist. <i>Wizard in the spare time</i>.</p>
 			</div>
 		</div>
-		<div class="listing">
-			
+		<div class="scrollable">
+			<div class="listing">
+				<h1>Games & Programming</h1>
+				<div class="list">
+					<div class="list_item">
+						<div class="bg" style="background-color: #252424"></div>
+						<div class="fg" style="background-image: url('img/listing/fsmga.png')"></div>
+					</div>
+					<div class="list_item">
+						<div class="bg" style="background-color: #252424"></div>
+						<div class="fg" style="background-image: url('img/listing/fsmga.png')"></div>
+					</div>
+					<div class="list_item">
+						<div class="bg" style="background-color: #252424"></div>
+						<div class="fg" style="background-image: url('img/listing/fsmga.png')"></div>
+					</div>
+					<div class="list_item">
+						<div class="bg" style="background-color: #252424"></div>
+						<div class="fg" style="background-image: url('img/listing/fsmga.png')"></div>
+					</div><div class="list_item">
+						<div class="bg" style="background-color: #252424"></div>
+						<div class="fg" style="background-image: url('img/listing/fsmga.png')"></div>
+					</div>
+					<div class="list_item">
+						<div class="bg" style="background-color: #252424"></div>
+						<div class="fg" style="background-image: url('img/listing/fsmga.png')"></div>
+					</div>
+					<div class="list_item">
+						<div class="bg" style="background-color: #252424"></div>
+						<div class="fg" style="background-image: url('img/listing/fsmga.png')"></div>
+					</div>
+					
+				</div>
+			</div>
 		</div>
 		<!-- Scripts -->
 		<script>
 			<!--Parallax-->
 			document.documentElement.style.setProperty('--mouseX',0.5);
-			 document.documentElement.style.setProperty('--mouseY',0.5);
+			document.documentElement.style.setProperty('--mouseY',0.5);
 			document.documentElement.addEventListener("mousemove", e => {
-			  let width = document.documentElement.offsetWidth; 
-			  let height = document.documentElement.offsetHeight;
-			  document.documentElement.style.setProperty('--mouseX',e.clientX/width);
-			  document.documentElement.style.setProperty('--mouseY',e.clientY/height);
+				let width = document.documentElement.offsetWidth; 
+				let height = document.documentElement.offsetHeight;
+				document.documentElement.style.setProperty('--mouseX',e.clientX/width);
+				document.documentElement.style.setProperty('--mouseY',e.clientY/height);
 			});
 			function timepassing(tick){
 				document.documentElement.style.setProperty('--ticksX',Math.sin(tick));
@@ -46,10 +79,20 @@
 				setTimeout(timepassing, 16, tick+0.01);
 			}
 			timepassing(0)
+			<!--Scrolling->
+			/*
+			addEventListener('scroll', e=> {
+				let height = document.documentElement.offsetHeight;				
+				let amount = Math.min(Math.max(pageYOffset/(height-window.innerHeight), 0),1);
+				document.documentElement.style.setProperty('--scroll',amount);				
+			});
+			*/
+			
 		</script
 	</body>
 </html>
 
 <!--TODOABLE
 	parallax only on left side
+	scapa on the sides
 -->

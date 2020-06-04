@@ -1,0 +1,144 @@
+
+body{	
+	margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    overflow-y: scroll
+}
+
+.banner{
+    position: fixed;
+    background: #252424;
+    background-size: cover;
+    width: 45%;
+    height: 100%;
+    float: left
+}
+.banner .nightynight {
+	height: 75%;
+}
+
+.banner .nightynight .boi {
+    position: absolute;
+    width: 40%;
+	image-rendering: pixelated;
+	left: 30%;
+    bottom: 25%;
+	z-index: 1;
+}
+.banner .nightynight .moon {
+	position: absolute;
+	image-rendering: pixelated;
+	width: 10%;
+	top: calc(5% +  (var(--mouseY) + var(--ticksY) * 0.2 ) * 70px);
+	left:calc(75% + (var(--mouseX) + var(--ticksX) * 0.2 ) * 70px);
+	transform: rotate( calc(30deg + var(--ticksX) * 5deg ) );
+}
+
+.banner .nightynight .shimmer1 {
+	position: absolute;
+	image-rendering: pixelated;
+	width: 5%;
+	top: calc(50% + (var(--mouseY) + var(--ticksY) * 0.2 ) * 800px);
+	left:calc(55% + (var(--mouseX) + var(--ticksX) * 0.2 ) * 800px);
+}
+.banner .nightynight .shimmer2 {
+	position: absolute;
+	image-rendering: pixelated;
+	width: 5%;
+	top: calc(10% + (var(--mouseY) + var(--ticksY) * 0.2 ) * 1200px);
+	left:calc(15% + (var(--mouseX) + var(--ticksX) * 0.2 ) * -600px);
+}
+.banner .nightynight .shimmer3 {
+	position: absolute;
+	image-rendering: pixelated;
+	width: 5%;
+	top: calc(20% + (var(--mouseY) + var(--ticksY) * 0.2 ) * 1200px);
+	left:calc(55% + (var(--mouseX) + var(--ticksX) * 0.2 ) * -400px);
+}
+.banner .nightynight .shimmer4 {
+	position: absolute;
+	image-rendering: pixelated;
+	width: 5%;
+	top: calc(-10% + (var(--mouseY) + var(--ticksY) * 0.2 ) * 2000px);
+	left:calc(5% + (var(--mouseX) + var(--ticksX) * 0.2 ) * -200px);
+}
+.banner .nightynight .shimmer5 {
+	position: absolute;
+	image-rendering: pixelated;
+	width: 5%;
+	top: calc(70% + (var(--mouseY) + var(--ticksY) * 0.2 ) * -800px);
+	left:calc(75% + (var(--mouseX) + var(--ticksX) * 0.2 ) * -800px);
+}
+.banner .nightynight .shimmer6 {
+	position: absolute;
+	image-rendering: pixelated;
+	width: 5%;
+	top: calc(50% + (var(--mouseY) + var(--ticksY) * 0.2 ) * 400px);
+	left:calc(-55% + (var(--mouseX) + var(--ticksX) * 0.2 ) * 1200px);
+}
+.banner .nightynight .shimmer7 {
+	position: absolute;
+	image-rendering: pixelated;
+	width: 5%;
+	top: calc(-50% + (var(--mouseY) + var(--ticksY) * 0.2 ) * -1600px);
+	left:calc(55% + (var(--mouseX) + var(--ticksX) * 0.2 ) * 300px);
+}
+.banner .nightynight .shimmer8 {
+	position: absolute;
+	image-rendering: pixelated;
+	width: 5%;
+	top: calc(80% + (var(--mouseY) + var(--ticksY) * 0.2 ) * 100px);
+	left:calc(85% + (var(--mouseX) + var(--ticksX) * 0.2 ) * -100px);
+}
+
+.banner .bio {
+	position: relative;
+	background: #252424;
+	background-size: cover;
+	height: 25%;
+	z-index: 1;
+	left: 64px;
+	bottom: -64px;
+	display: block;
+}
+.banner .bio h1{
+	color: #fff1dd;
+}
+.banner .bio p{
+	width: calc(100% - 128px);
+	color: #fff1dd;
+	font-weight: 500;
+    font-size: 1.1em;
+}
+
+.listing {
+    position: relative;
+	background: #c2cbff;
+	background-size: cover;
+    width: 55%;
+	height: 100%;
+    float: right;
+    overflow: visible;
+	z-index: 1;
+}
+
+@media(max-width: 1000px) {
+    .banner,.listing {
+        position:relative;
+        width: 100%
+    }
+
+    .banner {
+        height: 800px
+    }
+}
+
+//Scripts
+:root {
+  --mouseX: 0.5;
+  --mouseY: 0.5;
+  --ticksX: 0;
+  --ticksY: 0;
+}

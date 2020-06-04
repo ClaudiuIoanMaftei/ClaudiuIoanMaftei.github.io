@@ -1,67 +1,55 @@
-<!DOCTYPE html>
 <html>
-<head>
-
-	<meta charset="utf-8">
-
-	<title>Claudiu Ioan Maftei - Portfolio</title>
-	
-	<link rel="stylesheet" type="text/css" href="styles.css"/>
-
-</head>
-<body>
-	<!-- Second Background-->
-	<div class="second_background"></div>
-	
-	<!-- Parallax Divs -->
-	<div id="green" class="green">
-			<img data-depth-x="0.8" data-depth-y="0.3" src="images/home/green.png">
-	</div>
-	<div id="hill5" class="hill5">
-			<img data-depth-x="0.6" data-depth-y="0.25" src="images/home/hill5.png">
-	</div>
-	<div id="dragon" class="dragon">
-			<img data-depth-x="0.55" data-depth-y="0.2" src="images/home/dragon.png">
-	</div>
-	<div id="hill4" class="hill4">
-			<img data-depth-x="0.75" data-depth-y="0.15" src="images/home/hill4.png">
-	</div>
-	<div id="hill3" class="hill3">
-			<img data-depth-x="0.2" data-depth-y="0.2" src="images/home/hill3.png">
-	</div>
-	<div id="hill2" class="hill2">
-			<img data-depth-x="0.25" data-depth-y="0.25" src="images/home/hill2.png">
-	</div>
-	<div id="hill1" class="hill1">
-			<img data-depth-x="-0.1" data-depth-y="0.1" src="images/home/hill1.png">
-	</div>
-	<div id="person" class="person">
-			<img data-depth-x="-0.15" data-depth-y="-0.2" src="images/home/person.png">
-	</div>
-	
-	<!-- Scripts -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-	<script>
-
-	<!-- Parallax JS -->
-	var green = document.getElementById('green');
-	var green_parallax = new Parallax(green);
-	var hill5 = document.getElementById('hill5');
-	var hill5_parallax = new Parallax(hill5);
-	var dragon = document.getElementById('dragon');
-	var dragon_parallax = new Parallax(dragon);
-	var hill4 = document.getElementById('hill4');
-	var hill4_parallax = new Parallax(hill4);
-	var hill3 = document.getElementById('hill3');
-	var hill3_parallax = new Parallax(hill3);
-	var hill2 = document.getElementById('hill2');
-	var hill2_parallax = new Parallax(hill2);
-	var hill1 = document.getElementById('hill1');
-	var hill1_parallax = new Parallax(hill1);
-	var person = document.getElementById('person');
-	var person_parallax = new Parallax(person);
-
-	</script>
-
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>Claudiu Ioan Maftei - Portfolio</title>
+		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="core.css"/>
+		<!--icon-->
+	</head>
+	<body>
+		<div class="banner">
+			<div class="nightynight">
+				<img class="boi" src="img/banner/pc_little_boi.gif" alt="this is me being happy">
+				<img class="moon" src="img/banner/moon.png">
+				<img class="shimmer1" src="img/banner/shimmer1.png">
+				<img class="shimmer2" src="img/banner/shimmer2.png">
+				<img class="shimmer3" src="img/banner/shimmer3.png">
+				<img class="shimmer4" src="img/banner/shimmer4.png">
+				<img class="shimmer5" src="img/banner/shimmer5.png">
+				<img class="shimmer6" src="img/banner/shimmer6.png">
+				<img class="shimmer7" src="img/banner/shimmer7.png">
+				<img class="shimmer8" src="img/banner/shimmer8.png">
+			</div>
+			<div class="bio">
+				<h1>Claudiu Ioan Maftei</h1>
+				<!--<p> I code <i>things</i> & write poetry & do performance arts & I'm also a wizard.</p>-->
+				<p>Programmer. Indie Developer. Poet. Performance Artist. <i>Wizard in the spare time</i>.</p>
+			</div>
+		</div>
+		<div class="listing">
+			
+		</div>
+		<!-- Scripts -->
+		<script>
+			<!--Parallax-->
+			document.documentElement.style.setProperty('--mouseX',0.5);
+			 document.documentElement.style.setProperty('--mouseY',0.5);
+			document.documentElement.addEventListener("mousemove", e => {
+			  let width = document.documentElement.offsetWidth; 
+			  let height = document.documentElement.offsetHeight;
+			  document.documentElement.style.setProperty('--mouseX',e.clientX/width);
+			  document.documentElement.style.setProperty('--mouseY',e.clientY/height);
+			});
+			function timepassing(tick){
+				document.documentElement.style.setProperty('--ticksX',Math.sin(tick));
+				document.documentElement.style.setProperty('--ticksY',Math.cos(tick));
+				setTimeout(timepassing, 16, tick+0.01);
+			}
+			timepassing(0)
+		</script
+	</body>
 </html>
+
+<!--TODOABLE
+	parallax only on left side
+-->

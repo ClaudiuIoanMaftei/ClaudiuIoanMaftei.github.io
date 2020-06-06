@@ -31,7 +31,7 @@
 			<div class="listing">
 				<h1>Games & Programming</h1>
 				<div class="list">
-					<div class="list_item">
+					<div class="list_item" link="https://github.com/ClaudiuIoanMaftei/BachelorThesis">
 						<div class="bg" style="background-color: #252424"></div>
 						<div class="fg" style="background-image: url('img/listing/fsmga.png')"></div>
 						<div class="text">
@@ -40,21 +40,45 @@
 							<p>It can be found here.</p>-->
 						</div>
 					</div>
-					<div class="list_item">
+					<div class="list_item" link="https://mugurcolin.itch.io/slime">
 						<div class="bg" style="background-color: #252424"></div>
 						<div class="fg" style="background-image: url('img/listing/slime.png')"></div>
 						<div class="text">
 							<h4>Slime & Quiver</h4>
 						</div>
 					</div>
-					<div class="list_item">
+					<div class="list_item" link="https://stormmer.itch.io/5-minutes-left">
 						<div class="bg" style="background-color: #252424"></div>
 						<div class="fg" style="background-image: url('img/listing/5minutes.png')"></div>
 						<div class="text">
 							<h4>5 Minutes Left</h4>
 						</div>
 					</div>
-					
+				</div>
+				<h1>Poetry & Performances</h1>
+				<div class="list">
+					<div class="list_item" link="https://www.facebook.com/filit.iasi">
+						<div class="bg" style="background-color: #252424"></div>
+						<div class="fg" style="background-image: url('img/listing/filit.jpg')"></div>
+						<div class="text">
+							<h4>Guest at FILIT 2019 - The White Night of Poetry Marathon</h4>
+						</div>
+					</div>
+					<div class="list_item" link="https://www.facebook.com/cozypoetrynah">
+						<div class="bg" style="background-color: #252424"></div>
+						<div class="fg" style="background-image: url('img/listing/cozy.jpg')"></div>
+						<div class="text">
+							<h4>Performer at Several Cozy Poetry Night Events</h4>
+							<small>©john.d.photos</small>
+						</div>
+					</div>
+					<div class="list_item" link="https://www.facebook.com/trupa.introspect">
+						<div class="bg" style="background-color: #252424"></div>
+						<div class="fg" style="background-image: url('img/listing/intro.jpg')"></div>
+						<div class="text">
+							<h4>Sensory Theater Performer at Introspect</h4>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -75,6 +99,15 @@
 				setTimeout(timepassing, 16, tick+0.01);
 			}
 			timepassing(0)
+			<!--Clicking the links-->
+			var items = document.getElementsByClassName("list_item");
+			for (item of items){
+				let link=item.getAttribute('link');
+				if (link)
+					item.onclick = function() {
+						window.open(link, '_blank');
+					};
+			};
 			<!--Scrolling->
 			/*
 			addEventListener('scroll', e=> {

@@ -139,6 +139,7 @@ body{
     margin: 0 5% 5% 0;
     float: left;
     overflow: hidden;
+	cursor: pointer;
 }
 .scrollable .listing .list .list_item .bg{
 	width: 100%;
@@ -171,6 +172,15 @@ body{
 	color: #fff1dd;
 	font-weight: 500;
     font-size: 2em;
+}
+.scrollable .listing .list .list_item .text small{
+	position: relative;
+	bottom: -160;
+	padding-right: 16px;
+	color: #fff1dd;
+	font-weight: 100;
+	font-size: 1.2em;
+	float: right;
 }
 
 .scrollable .listing .list .list_item:hover .fg{

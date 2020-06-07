@@ -29,7 +29,7 @@
 		</div>
 		<div class="scrollable">
 			<div class="listing">
-				<h1>Games & Programming</h1>
+				<h1 id="GamesProgramming">Games & Programming</h1>
 				<div class="list">
 					<div class="list_item" link="https://github.com/ClaudiuIoanMaftei/BachelorThesis">
 						<div class="bg" style="background-color: #252424"></div>
@@ -55,7 +55,7 @@
 						</div>
 					</div>
 				</div>
-				<h1>Poetry & Performances</h1>
+				<h1 id="PoetryPerformances">Poetry & Performances</h1>
 				<div class="list">
 					<div class="list_item" link="https://www.facebook.com/filit.iasi">
 						<div class="bg" style="background-color: #252424"></div>
@@ -108,6 +108,12 @@
 						window.open(link, '_blank');
 					};
 			};
+			<!--Jumping to headers-->
+			let link_parts= window.location.href.split('#');
+			if ('scrollRestoration' in window.history) {
+			  window.history.scrollRestoration = 'manual';
+			}
+			window.scrollTo(0, document.getElementById(link_parts[1]).offsetHeight);
 			<!--Scrolling->
 			/*
 			addEventListener('scroll', e=> {

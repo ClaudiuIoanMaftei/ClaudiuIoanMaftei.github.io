@@ -98,15 +98,17 @@ body{
 	background-size: cover;
 	height: 25%;
 	z-index: 1;
-	left: 64px;
+	
 	width: calc(100% - 64px);
 	bottom: -64px;
 	display: block;
 }
 .banner .bio h1{
+	padding-left: 64px;
 	color: #fff1dd;
 }
 .banner .bio p{
+	padding-left: 64px;
 	width: calc(100% - 128px);
 	color: #fff1dd;
 	font-weight: 500;

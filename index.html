@@ -4,22 +4,23 @@
 		<title>Claudiu Ioan Maftei - Portfolio</title>
 		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="core.css"/>
+        <script src="index.js"></script>
 		<!--icon-->
 		<!--preview-->
 	</head>
-	<body>
+	<body onload="onLoad()">
 		<div class="banner">
 			<div class="nightynight">
-				<img class="boi" src="img/banner/pc_little_boi.gif" alt="this is me being happy">
-				<img class="moon" src="img/banner/moon.png">
-				<img class="shimmer1" src="img/banner/shimmer1.png">
-				<img class="shimmer2" src="img/banner/shimmer2.png">
-				<img class="shimmer3" src="img/banner/shimmer3.png">
-				<img class="shimmer4" src="img/banner/shimmer4.png">
-				<img class="shimmer5" src="img/banner/shimmer5.png">
-				<img class="shimmer6" src="img/banner/shimmer6.png">
-				<img class="shimmer7" src="img/banner/shimmer7.png">
-				<img class="shimmer8" src="img/banner/shimmer8.png">
+				<img class="pixelated boi" src="img/banner/pc_little_boi.gif" alt="this is me being happy">
+				<img class="pixelated moon" src="img/banner/moon.png">
+				<img class="pixelated shimmer1" src="img/banner/shimmer1.png">
+				<img class="pixelated shimmer2" src="img/banner/shimmer2.png">
+				<img class="pixelated shimmer3" src="img/banner/shimmer3.png">
+				<img class="pixelated shimmer4" src="img/banner/shimmer4.png">
+				<img class="pixelated shimmer5" src="img/banner/shimmer5.png">
+				<img class="pixelated shimmer6" src="img/banner/shimmer6.png">
+				<img class="pixelated shimmer7" src="img/banner/shimmer7.png">
+				<img class="pixelated shimmer8" src="img/banner/shimmer8.png">
 			</div>
 			<div class="bio">
 				<h1>Claudiu Ioan Maftei</h1>
@@ -57,7 +58,7 @@
 				</div>
 				<h1 id="PoetryPerformances">Poetry & Performances</h1>
 				<div class="list">
-					<div class="list_item" link="https://www.facebook.com/filit.iasi">
+					<div class="list_item" link="http://filit-iasi.ro/">
 						<div class="bg" style="background-color: #252424"></div>
 						<div class="fg" style="background-image: url('img/listing/filit.jpg')"></div>
 						<div class="text">
@@ -81,53 +82,9 @@
 					</div>
 				</div>
 			</div>
+			<div class="self-creditting">
+				<p>"Designed and coded with love by Claudiu Ioan Maftei"</p>
+			</div>
 		</div>
-		<!-- Scripts -->
-		<script>
-			<!--Parallax-->
-			document.documentElement.style.setProperty('--mouseX',0.5);
-			document.documentElement.style.setProperty('--mouseY',0.5);
-			document.documentElement.addEventListener("mousemove", e => {
-				let width = document.documentElement.offsetWidth; 
-				let height = document.documentElement.offsetHeight;
-				document.documentElement.style.setProperty('--mouseX',e.clientX/width);
-				document.documentElement.style.setProperty('--mouseY',e.clientY/height);
-			});
-			function timepassing(tick){
-				document.documentElement.style.setProperty('--ticksX',Math.sin(tick));
-				document.documentElement.style.setProperty('--ticksY',Math.cos(tick));
-				setTimeout(timepassing, 16, tick+0.01);
-			}
-			timepassing(0)
-			<!--Clicking the links-->
-			var items = document.getElementsByClassName("list_item");
-			for (item of items){
-				let link=item.getAttribute('link');
-				if (link)
-					item.onclick = function() {
-						window.open(link, '_blank');
-					};
-			};
-			<!--Jumping to headers-->
-			let link_parts= window.location.href.split('#');
-			if ('scrollRestoration' in window.history) {
-			  window.history.scrollRestoration = 'manual';
-			}
-			window.scrollTo(0, document.getElementById(link_parts[1]).offsetHeight);
-			<!--Scrolling->
-			/*
-			addEventListener('scroll', e=> {
-				let height = document.documentElement.offsetHeight;				
-				let amount = Math.min(Math.max(pageYOffset/(height-window.innerHeight), 0),1);
-				document.documentElement.style.setProperty('--scroll',amount);				
-			});
-			*/
-			
-		</script
 	</body>
 </html>
-
-<!--TODOABLE
-	parallax only on left side
-	on hover add some nicey things - an icon of sorts
--->
